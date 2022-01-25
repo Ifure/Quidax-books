@@ -10,6 +10,7 @@ import { CartContext } from "../context/cartContext";
 import { BookContext } from "../context/bookContext";
 import {   useNavigate } from 'react-router-dom';
 import Cart from './cart';
+import { FaArrowLeft } from 'react-icons/fa';
 
 
 
@@ -57,9 +58,7 @@ export default function Header() {
 							<img src={cartIcon} alt="cart" />
 							<span className="absolute top-2 flex items-center justify-center right-0 bg-lemon rounded-full h-5 w-5 text-white p-1">{cart.length}</span>
 						</button>
-
 					</div>
-
 					{cartIsOpen && (<Cart />)}
 				</header>
 		
@@ -70,17 +69,16 @@ export default function Header() {
 						animate={{y: 0}}
 						exit={{y: "-100%" }}
 						transition={{type:"tween", duration: 0.5}}>
-							<button className="mx-5 " >
-								<img src={backArrow} alt="search-icon" onClick={toggleSearchBar} />
+							<button className="mr-5" >
+								<FaArrowLeft onClick={toggleSearchBar}/>
 							</button>
 							<div className="flex">
-								<input type="text" onKeyUp={onSearch} className="outline-none w-80 px-3 py-2 border border-gray-200" placeholder="Search books, genres, author, etc." />
+								<input type="text" onKeyUp={onSearch} className="outline-none w-60 px-3 py-2 border border-gray-200" placeholder="Search books, genres, author, etc." />
 								<button className=" p-2 bg-gray-200">
 									<img src={searchIcon} alt="search-icon" />
 								</button>
 							</div>
 						</motion.div>
-			
 			)}	
 			</>
 

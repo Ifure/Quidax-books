@@ -12,7 +12,7 @@ const Cart = () => {
 	
 
 	return (
-		<div className= 'h-screen bg-black bg-opacity-50 absolute flex inset-0 justify-end items-center '>
+		<div className= 'h-screen bg-black bg-opacity-50 absolute flex top-0 left-0 bottom-0 right-0 justify-end items-center '>
 			<motion.aside className="overflow-y-scroll scrollbar-hide bg-white h-full w-full sm:w-1/3 md:w-3/7 lg:w-1/4 py-2 px-5 shadow-xl text-black"
 				initial={{x: "100%"}}
 				animate={{x: 0}}
