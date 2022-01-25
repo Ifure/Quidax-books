@@ -13,17 +13,13 @@ export default function FeaturedBooks() {
 	return (
 		<div className="relative mt-36">
 			<h3 className='text-black text-lg font-medium hidden sm:block sm:pl-10 mb-3'> Featured Books</h3>
-			<div className="flex no-wrap overflow-x-scroll scrollbar-hide cursor-pointer ">
-
+			<div className="flex no-wrap overflow-x-scroll scrollbar-hide cursor-pointer shadow-2xl ">
 						{
 							features.map((book, i) => {
 								return(
 										<FeaturedCard book={book} key={i}/>
 								)
 						})}
-
-						
-				
 			</div>
 			{/* <div  className="absolute text-black text-xl top-0 sm:top-10 flex items-center justify-center bottom-2 left-0 bg-gradient-to-b from-gray-100 to-gray-700 opacity-50  px-3">
 				<FaCaretLeft/>

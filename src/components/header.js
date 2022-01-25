@@ -37,7 +37,7 @@ export default function Header() {
 
 	return (
 		<>
-				<header className=" w-full h-24 bg-white flex fixed justify-around items-center flex-grow py-3 border-b border-gray-300 shadow-md z-10">
+				<header className=" w-full h-24 bg-white flex fixed justify-around items-center flex-grow py-3 px-3 border-b border-gray-300 shadow-md z-10">
 					<div className="">
 						<img src={brandFull} alt="logo" className="w-full hidden sm:block" />
 						<img src={singleLogo} alt="logo" className='w-full sm:hidden' />
@@ -52,10 +52,10 @@ export default function Header() {
 					<div className="flex justify-center align-center relative">
 						<img src={books} alt="books" className="mr-5 bg-gray-100 rounded-full p-3 " />
 
-						<button className='cursor-pointer' onClick={toggleCart}>
+						<button className='cursor-pointer mx-3  ' onClick={toggleCart}>
 
 							<img src={cartIcon} alt="cart" />
-							<span className="absolute top-2 flex items-center justify-center -right-3 bg-lemon rounded-full h-5 w-5 text-white p-1">{cart.length}</span>
+							<span className="absolute top-2 flex items-center justify-center right-0 bg-lemon rounded-full h-5 w-5 text-white p-1">{cart.length}</span>
 						</button>
 
 					</div>
@@ -70,7 +70,7 @@ export default function Header() {
 						animate={{y: 0}}
 						exit={{y: "-100%" }}
 						transition={{type:"tween", duration: 0.5}}>
-							<button className="mr-5" >
+							<button className="mx-5 " >
 								<img src={backArrow} alt="search-icon" onClick={toggleSearchBar} />
 							</button>
 							<div className="flex">

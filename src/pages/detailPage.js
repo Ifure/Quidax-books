@@ -79,12 +79,12 @@ const DetailPage = () => {
 
 				<div className="flex flex-col md:flex-row  md:justify-start py-3 w-full mt-3 border-t border-b  border-gray-200">
 					<div className="flex md:items-center md:pr-5">
-						<div className="flex border-r border-gray-200  px-4 ">
+						<div className="flex border-r border-gray-200 pr-5">
 							<div className="">
 								<img src={People} alt="people" />
 								<p className="text-center">{selectedBook.number_of_purchases}</p>
 							</div>
-							<div className="">
+							<div className="px-3 sm:px-0">
 								<img src={Heart} alt="" />
 								<p className="text-center">{selectedBook.likes}</p>
 							</div>
@@ -139,7 +139,7 @@ const DetailPage = () => {
 			</div>
 			</main>
 				{selectedBook.available_copies > 0 && (
-					<div className="fixed cursor-pointer md:hidden w-3/4 flex shadow-2xl text-white px-10 items-center left-14 bottom-7 rounded h-24  bg-black"  onClick={(() => addToCart(selectedBook))}>
+					<div className="fixed cursor-pointer md:hidden w-3/4 flex shadow-2xl text-white px-5 items-center left-14 bottom-7 rounded h-24  bg-black"  onClick={(() => addToCart(selectedBook))}>
 					<div className="">
 						<svg width="30" height="30" className="cart-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path style={{fill:'white' }} fillRule="evenodd" clipRule="evenodd" d="M19.5545 13.3568L6.90606 14.6356C6.56202 14.6699 6.2604 15.0034 6.2604 15.3489C6.2604 15.662 6.51515 15.917 6.82828 15.917H19.4693C19.9404 15.917 20.3216 16.2986 20.3216 16.7691C20.3216 17.2396 19.9404 17.6214 19.4693 17.6214H6.82828C6.81374 17.6214 6.79899 17.621 6.78444 17.6202C5.56667 17.597 4.58061 16.6109 4.55737 15.3931C4.55677 15.3784 4.55636 15.3636 4.55636 15.3491C4.55636 14.758 4.78141 14.1836 5.1903 13.7317C5.59939 13.2798 6.14828 12.9986 6.73657 12.9398L7.14545 12.899L4.48384 3.70424H2.85212C2.38141 3.70424 2 3.32263 2 2.85212C2 2.38162 2.38141 2 2.85212 2H5.12424C5.50364 2 5.83737 2.25091 5.94263 2.61515L6.42242 4.27212H19.4693C19.9404 4.27212 20.3216 4.65354 20.3216 5.12424V12.5089C20.3216 12.9469 19.9897 13.3131 19.5545 13.3568ZM18.6174 5.97636H6.91556L8.8697 12.7267L18.6174 11.7378V5.97636Z" fill="black"/>

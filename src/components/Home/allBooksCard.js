@@ -11,11 +11,11 @@ const AllBooksCard = ({book}) =>  {
 	const title = book.title
 
 	return (	
-		<div key={book.id} className="w-full md:w-96 text-sm max-w-3xl flex items-center hover:shadow-2xl mx-3 my-5">
+		<div key={book.id} className="max-w-full mx-3 md:w-96 text-sm flex  items-center  hover:shadow-2xl my-5">
 		<Link  to= { `books/${title.split(" ").join("-")}`}	state= {{book}}  >
 			<div className="flex ">
 				<div className=" w-2/5 mr-5 ">
-					<img src={book.image_url} alt={book.title} className="w-72 h-48" />
+					<img src={book.image_url} alt={book.title} className="w-full h-full" />
 				</div>
 				<div className="w-3/5">
 					<h3 className='font-bold'>{book.title}</h3>
@@ -35,11 +35,11 @@ const AllBooksCard = ({book}) =>  {
 					<div className="flex items-center w-full mb-2">
 						<div className=" flex items-center border-r border-gray-200 ">
 							<div className="flex  ">
-								<div className="mr-5">
+								<div className="">
 									<img src={People} alt="" />
 									<p className="text-center">{book.number_of_purchases}</p>
 								</div>
-								<div className="mr-5">
+								<div className="px-3">
 								<img src={Heart} alt="" />
 								<p className="text-center">{book.likes}</p>
 								</div>
